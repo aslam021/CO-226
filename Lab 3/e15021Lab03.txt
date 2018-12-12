@@ -1,0 +1,54 @@
+CREATE DATABASE e15021;
+
+USE e15021;
+
+CREATE TABLE Customer(Customer_ID int NOT NULL PRIMARY KEY, f_Name VARCHAR(10), l_Name VARCHAR(10), Address1 VARCHAR(30), Address2 VARCHAR(30), Address3 VARCHAR(30));
+
+describe Customer;
+
+CREATE TABLE Tshirt(Tshirt_ID int NOT NULL PRIMARY KEY, Tshirt_Colour ENUM('blue', 'red', 'green'), Tshirt_Size enum('small', 'medium', 'large'));
+
+describe tshirt;
+
+CREATE TABLE orders ( orderID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+      customer_ID INT NOT NULL,
+      tshirt_ID INT NOT NULL,
+      cap enum('Y','N'),
+      wristband enum('Y','N'),
+      comments TEXT,
+      CONSTRAINT customer_ID FOREIGN KEY (customer_ID) REFERENCES Customer(customer_ID),
+      CONSTRAINT tshirt_ID FOREIGN KEY (tshirt_ID) REFERENCES Tshirt(tshirt_ID) );
+
+describe orders;
+
+insert into customer values(1, 'Roshan', 'Silva', 'No 1, Peradeniya, Kandy', 'No 2, Main Street, Colombo', 'No 12, Kandy Road, Peradeniya');
+
+insert into customer values(2, 'Viraj', 'Akila', null, 'No 1, Main street, Peradeniya', null);
+
+insert into customer(Customer_ID, f_Name, l_Name, Address1) values(3, 'Lahiru', 'Silva', 'No 1, Main street, Anuradhapura');
+
+select *  from customer;
+
+insert into tshirt values(101, 'blue', 'small');
+
+insert into tshirt values(103, 'blue', 'large');
+
+insert into tshirt values(104, 'red', 'large');
+
+select *  from tshirt;
+
+insert into orders values(10, 2, 101, 'Y', 'N', 'Deliver quickly');
+
+insert into orders values(11, 1, 104, 'N', 'N', 'Deliver quickly');
+
+insert into orders values(12, 3, 103, 'N', 'Y', 'Deliver quickly');
+
+insert into orders values(13, 2, 103, 'N', 'Y', null);
+
+drop table orders;
+
+drop table customer;
+
+drop table Tshirt;
+
+drop database e15021;

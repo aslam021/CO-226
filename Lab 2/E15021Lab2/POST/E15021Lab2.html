@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+<style>
+	h1{
+		font-size: 40px;
+	}
+	
+	h2{
+		font-size: normal;
+		font-weight: bold;
+	}
+	
+	fieldset{
+		width: 560px;
+		margin: 0 auto;
+		background-color: rgb(225, 190, 231);
+		padding-top: 10px;
+		line-height: 25px;
+	}
+	
+	body{
+		background-color: rgb(243, 229, 245);
+		
+	}
+	
+	
+
+</style>
+
+</head>
+
+
+<body>
+<center>
+<fieldset>
+<form>
+	<h1> Buy T-shirts Online </h1>
+	<h2> <i>Fill out the form below and click "Order Now" to order</i> </h2>
+	<br>
+	<table>
+	<tr>
+	<th style="font-weight: normal;" >Search by order number:</th>
+	<th>  &nbsp;&nbsp;  <input type="text" name=""> </input> 
+		<input type="submit" value="Search"> </input></th>
+	</tr>
+</form>
+<form action="E15021Lab2.php" method="post">	
+	<tr>
+	<th style="font-weight: normal;" >Choose your size:</th>
+		<th style="font-weight: normal;" >  &nbsp;&nbsp;  
+						<input  style="font-weight: normal;" type="radio" name="size" value="Small"> Small </input>
+						<input  style="font-weight: normal;" type="radio" name="size" value="Medium">  Medium </input>
+						<input  style="font-weight: normal;" type="radio" name="size" value="Large"> Large</input> 
+		</th>
+	</tr>
+	
+	<tr>
+	<th style="font-weight: normal;" >Choose your colour:</th>
+	<th style="text-align: left; font-weight: normal;"> &nbsp;&nbsp; 
+		<select name="colour"> 
+			<option style="text-align: left; font-weight: normal;" value="Red"> Red </option>
+			<option style="text-align: left; font-weight: normal;" value="Blue"> Blue </option>
+	   		<option style="text-align: left; font-weight: normal;" value="Green"> Green </option>
+	    </select> 
+	</th>
+	</tr>
+	
+	<tr>
+	<th style="font-weight: normal;" >Extra Items:</th>
+	<th style="text-align: left; font-weight: normal;"> &nbsp;&nbsp; <input  style="font-weight: normal;" type="checkbox" name="cap" value="Cap"> Cap 
+	</input> </th>
+	</tr>
+	<tr>
+	<th></th>
+	<th style="text-align: left; font-weight: normal;"> &nbsp;&nbsp; <input  style="font-weight: normal;" type="checkbox" name="band" value="Wrist Band"> Wrist Band </input></th>
+	</tr>
+	<tr>
+		<th style="text-align: right; font-weight: normal;">First Name: </th>
+		<th style="text-align: left;"> &nbsp;&nbsp; <input type="text" name="fName"> </input> &nbsp;&nbsp; </th>
+	</tr>
+	<tr>
+		<th style="text-align: right; font-weight: normal;">Last Name: </th>
+		<th style="text-align: left;"> &nbsp;&nbsp; <input type="text" name="lName"> </input>  </th>
+	</tr>
+	<tr>
+		<th style="font-weight: normal;">Delever to: &nbsp;&nbsp;&nbsp;Address1: </th>
+		<th style="text-align: left;"> &nbsp;&nbsp; <input type="text" name="ad1"> </input> &nbsp;&nbsp; </th>
+	</tr>
+	<tr>
+		<th style="text-align: right; font-weight: normal;">Address2: </th>
+		<th style="text-align: left;"> &nbsp;&nbsp; <input type="text" name="ad2"> </input> &nbsp;&nbsp; </th>
+	</tr>
+	<tr>
+		<th style="text-align: right; font-weight: normal;">Address3: </th>
+		<th style="text-align: left;"> &nbsp;&nbsp; <input type="text" name="ad3"> </input> &nbsp;&nbsp; </th>
+	</tr>
+	<tr>
+	<th style="text-align: left; font-weight: normal;">Your Comments:</th>
+	<th></th>
+	</tr>
+	</table>
+	 <textarea name="comment" rows="5" cols="52"> </textarea> &nbsp;&nbsp;
+	<br>
+	 <input type="submit" value="Order Now"> </input> &nbsp;&nbsp;
+
+</form>
+</fieldset>
+</center>
+
+</body>
+
+</html>
